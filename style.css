@@ -1,0 +1,141 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  header {
+    background-color:#013254;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  
+  .movie-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+
+  h1 {
+    color: #ffffff;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 20px;
+
+  }
+  
+  .filter-buttons button {
+    background-color: #013254;
+    border: 3px solid #ffffff;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex: content; /* Yeni eklenen stil: Eşit genişlikte düğmeler */
+    max-width: calc(33.33% - 10px); /* Yeni eklenen stil: Maksimum genişlik */
+    border-radius: 10px;
+
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-card h2 {
+    color: #333;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #f5f5f5; /* Arka plan rengini açık griye değiştir */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .modal-content button {
+    background-color: #013254; /* Düğme rengini yeşile değiştir */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .modal-content button:hover {
+    background-color: #27ae60; /* Hover durumundaki düğme rengini koyu yeşile değiştir */
+  }
+  
+
+  @media screen and (max-width: 1400px) {
+    .container {
+      max-width: 1040px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+  }
+
+  @media screen and (max-width: 1080px) {
+    .container {
+      max-width: 680px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 300px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    
+  }
